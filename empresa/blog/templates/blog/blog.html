@@ -28,7 +28,6 @@
                 {% for category in post.categories.all %} <!-- Se generan variables especiales ultimo y primero -->
                   <a href="{% url 'category' category.id %}" class="link" > {{category.name}} </a> {% if not forloop.last %},{% endif %}
                 {% endfor %}
-
               </em> <!-- El tag em es para que se escriba en cursiva -->
             </span> 
           </p>
