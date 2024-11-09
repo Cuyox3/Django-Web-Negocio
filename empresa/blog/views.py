@@ -9,15 +9,15 @@ def blog(request):
 #El diccionario tiene que tener el mismo nombre que la clave para podere recorrerlo en el for del html 
 
 
-def category (request, category_id): 
-    category = get_object_or_404(Category, id=category_id)
-    return render (request, "blog/category.html", {'category':category})
+#def category (request, category_id):
+#    category = get_object_or_404(Category, id=category_id)
+#    return render (request, "blog/category.html", {'category':category})
 
 
 
 
-#def category (request, category_id): 
-#    category = get_object_or_404(Catergory,id=category_id)
-#    posts  = Post.objects.filter  (categories=category) 
-#    return render (request, "blog/category.html", {'category':category,
-#                                                  'posts':posts})
+def category (request, category_id):
+    category = get_object_or_404(Category,id=category_id)
+    posts  = Post.objects.filter  (categories=category)
+    return render (request, "blog/category.html", {'category':category,
+                                                  'posts':posts})

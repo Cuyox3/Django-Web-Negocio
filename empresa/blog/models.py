@@ -27,8 +27,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
     class Meta:
-        verbose_name = "entrada"
-        verbose_name_plural = "entradas"
+        verbose_name = "Post"
+        verbose_name_plural = "Posts"
         ordering = ["-created"]
 
     def __str__(self):
