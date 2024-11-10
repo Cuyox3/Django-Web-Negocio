@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'blog',
     'core',
     'Services.apps.ServicesConfig',
+    'social.apps.SocialConfig',
+    'pages.apps.PagesConfig',
     
 ]
 
@@ -70,6 +72,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.procesos.ctx_dict',
             ],
         },
     },

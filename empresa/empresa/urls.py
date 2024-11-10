@@ -28,6 +28,7 @@ urlpatterns = [
     path('services/', include('Services.urls')),
     #Blog
     path('blog/', include('blog.urls')),
+    path('page/', include('pages.urls')),
 ]
 
 
