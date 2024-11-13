@@ -29,6 +29,7 @@ urlpatterns = [
     #Blog
     path('blog/', include('blog.urls')),
     path('page/', include('pages.urls')),
+    path('contact/', include('contact.urls')),
 ]
 
 
