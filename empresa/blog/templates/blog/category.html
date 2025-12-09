@@ -6,7 +6,7 @@
 
 {% block content %}
 {% for post in category.get_posts.all %}
-<section class="page-section cta">rgr
+<section class="page-section cta">
   <div class="container">
     <div class="row">
       <div class="col-xl-9 mx-auto">
@@ -25,8 +25,8 @@
             <span class="section-heading-under">Publicado por: <em><b>{{post.author}}</b></em> en: 
               <!--<em> <a href="#" class="link">General</a>, <a href="#" class="link">Ofertas</a></em></span>-->
               <em> 
-                {% for Category in post.categories.all %} <!-- Se generan variables especiales ultimo y primero -->
-                  <a href="{% url 'category' category.id %}" class="link" > {{Category.name}} </a> {% if not forloop.last %},{% endif %}
+                {% for category in post.categories.all %} <!-- Se generan variables especiales ultimo y primero -->
+                  <a href="{% url 'category' category.id %}" class="link" > {{category.name}} </a> {% if not forloop.last %},{% endif %}
                 {% endfor %}
               </em> <!-- El tag em es para que se escriba en cursiva -->
             </span> 
