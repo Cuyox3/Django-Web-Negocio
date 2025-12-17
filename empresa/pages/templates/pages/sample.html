@@ -14,8 +14,8 @@
             <h2 class="section-heading mb-4">
               <span class="section-heading-lower">{{ page.title }}</span>
             </h2>
-            <div class="section-content">
-
+            <div class="section-content"> 
+              {{page.content | safe }} <!-- Se tiene que agregar este safe para que las modificaciones de ckeditor puedan verse reflegadas -->
               {% if user.is_authenticated %}
                   <p> <a href="{% url 'admin:pages_pages_change' page.id %}"> Editar </a></p>
               {% endif %}
